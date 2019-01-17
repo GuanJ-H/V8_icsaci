@@ -26,7 +26,27 @@ exec /bin/octave "$@"
 #    yum -y update
     yum -y install qtwebkit
     yum -y install qt5-qtbase-devel   
-    yum -y install octave4.4.1
+    yum -y install yum-utils
+    yum-builddep -y octave
+    yum -y install qt-devel mercurial gcc-c++ lapack-devel libtool
+    yum -y install epstool transfig pstoedit qscintilla-devel
+    git clone git@github.com:opencollab/arpack-ng.git
+    cd arpack-ng
+    ./bootstrap
+    ./configure --prefix="some local prefix"
+    make; make install
+    mkdir -p /usr/local/octave/dev
+    chown jwe.jwe /usr/local/octave/dev
+    mkdir src build
+    cd src
+    hg clone http://hg.savannah.gnu.org/hgweb/octave
+    cd octave
+   ./bootstrap
+    cd ../../build
+    ../src/octave/configure --prefix=/usr/local/octave/dev
+    make -j6 all
+    make check
+    make install
     mkdir -p /storage/home
     mkdir -p /storage/work
     mkdir -p /gpfs/scratch
