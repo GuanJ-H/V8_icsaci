@@ -37,7 +37,7 @@ exec /bin/octave "$@"
     tar xf octave-4.4.1.tar.xz 
     rm octave-4.4.1.tar.xz 
     cd octave-4.4.1/ 
-    ./configure
+    ./configure --with-qt=4
     make -j6 all
     make check
     make install
