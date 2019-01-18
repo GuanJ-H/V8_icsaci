@@ -28,8 +28,11 @@ exec /bin/octave "$@"
     yum -y install qt5-qtbase-devel   
     yum -y install yum-utils
     yum-builddep -y octave
-    yum -y install qt-devel mercurial gcc-c++ lapack-devel libtool
+    yum -y install qt-devel mercurial gcc-c++ lapack-devel libtool arpack-devel
     yum -y install epstool transfig pstoedit qscintilla-devel
+    yum install librsvg2-tools icoutils bzip2-devel libsndfile-devel
+    yum install portaudio-devel mesa-libOSMesa-devel 
+    yum install sundials-devel sundials-threads-devel
     wget ftp://ftp.gnu.org/gnu/octave/octave-4.4.1.tar.xz 
     tar xf octave-4.4.1.tar.xz 
     rm octave-4.4.1.tar.xz 
