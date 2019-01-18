@@ -30,13 +30,7 @@ exec /bin/octave "$@"
     yum-builddep -y octave
     yum -y install qt-devel mercurial gcc-c++ lapack-devel libtool
     yum -y install epstool transfig pstoedit qscintilla-devel
-    git clone https://github.com/opencollab/arpack-ng.git
-    cd arpack-ng
-    ./bootstrap
-    ./configure --prefix="some local prefix"
-    make; make install
-    mkdir -p /usr/local/octave/dev
-    chown jwe.jwe /usr/local/octave/dev
+    mkdir -p /storage/work/octave/dev
     mkdir src build
     cd src
     hg clone http://hg.savannah.gnu.org/hgweb/octave
