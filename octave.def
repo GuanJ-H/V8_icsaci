@@ -33,6 +33,10 @@ exec /octave-4.4.1/run-octave "$@"
     yum -y install librsvg2-tools icoutils bzip2-devel libsndfile-devel
     yum -y install portaudio-devel mesa-libOSMesa-devel 
     yum -y install sundials-devel sundials-threads-devel
+    yum -y install arpack-devel
+    yum -y install java-1.8.0-openjdk
+    yum -y install java-1.8.0-openjdk-devel
+    export JAVA_HOME=/usr/lib/jvm/java
     wget ftp://ftp.gnu.org/gnu/octave/octave-4.4.1.tar.xz 
     tar xf octave-4.4.1.tar.xz 
     rm octave-4.4.1.tar.xz 
