@@ -33,13 +33,12 @@ exec /octave-4.4.1/run-octave "$@"
     yum -y install librsvg2-tools icoutils bzip2-devel libsndfile-devel
     yum -y install portaudio-devel mesa-libOSMesa-devel 
     yum -y install sundials-devel sundials-threads-devel
-    yum -y install libarpack2 libarpack2-dev 
     export JAVA_HOME=/usr/lib/jvm/java
     wget ftp://ftp.gnu.org/gnu/octave/octave-4.4.1.tar.xz 
     tar xf octave-4.4.1.tar.xz 
     rm octave-4.4.1.tar.xz 
     cd octave-4.4.1/ 
-    ./configure --with-qt=4
+    ./configure --with-qt=4 --with-arpack-libdir=/usr/lib/
     make -j6 all
     make check
     make install
