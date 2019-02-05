@@ -29,7 +29,7 @@ exec /octave-4.4.1/run-octave "$@"
     yum -y install yum-utils
     yum-builddep -y octave
     yum -y install qt-devel mercurial gcc-c++ lapack-devel libtool
-    yum -y install arpack-devel
+    yum -y install libarpack2 libarpack2-dev 
     yum -y install epstool transfig pstoedit qscintilla-devel
     yum -y install librsvg2-tools icoutils bzip2-devel libsndfile-devel
     yum -y install portaudio-devel mesa-libOSMesa-devel 
