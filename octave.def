@@ -24,25 +24,14 @@ exec /octave-4.4.1/run-octave "$@"
     yum -y install SDL SDL-devel
     yum install -y epel-release
 #    yum -y update
-    yum -y install qtwebkit
-    yum -y install qt5-qtbase-devel   
-    yum -y install yum-utils
-    yum-builddep -y octave
-    yum -y install qt-devel mercurial gcc-c++ lapack-devel libtool
-    yum -y install arpack
-    yum -y install epstool transfig pstoedit qscintilla-devel
-    yum -y install librsvg2-tools icoutils bzip2-devel libsndfile-devel
-    yum -y install portaudio-devel mesa-libOSMesa-devel 
-    yum -y install sundials-devel sundials-threads-devel
-    export JAVA_HOME=/usr/lib/jvm/java
-    wget ftp://ftp.gnu.org/gnu/octave/octave-4.4.1.tar.xz 
-    tar xf octave-4.4.1.tar.xz 
-    rm octave-4.4.1.tar.xz 
-    cd octave-4.4.1/ 
-    ./configure --with-qt=4 --with-arpack-libdir=/usr/lib/
-    make -j6 all
-    make check
-    make install
+    yum install gcc gcc-c++ kernel-devel make mercurial libtool libtool-ltdl-devel libtool-ltdl autoconf cmake lapack-devel \
+    lapack pcre-devel readline-devel readline fftw-devel glpk-devel suitesparse suitesparse-devel gnuplot libcurl-devel zlib-devel \
+    flex texlive gperf fltk-devel qhull-devel hdf5-devel gl2ps-devel qrupdate-devel arpack-devel qscintilla-devel llvm-devel qt-devel \
+    bison ghostscript-devel librsvg2-tools icoutils texlive-metapost
+    yum -y install freetype-devel, libxml2-devel
+    
+    yum -y install cmake, metis, tbb, blas-devel,  cuda, suite-sparse
+    
     mkdir -p /storage/home
     mkdir -p /storage/work
     mkdir -p /gpfs/scratch
