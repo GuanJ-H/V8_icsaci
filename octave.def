@@ -27,11 +27,10 @@ exec /octave-4.4.1/run-octave "$@"
     yum install gcc gcc-c++ kernel-devel make mercurial libtool libtool-ltdl-devel libtool-ltdl autoconf cmake lapack-devel \
     lapack pcre-devel readline-devel readline fftw-devel glpk-devel suitesparse suitesparse-devel gnuplot libcurl-devel zlib-devel \
     flex texlive gperf fltk-devel qhull-devel hdf5-devel gl2ps-devel qrupdate-devel arpack-devel qscintilla-devel llvm-devel qt-devel \
-    bison ghostscript-devel librsvg2-tools icoutils texlive-metapost
-    yum -y install freetype-devel, libxml2-devel
-    
-    yum -y install cmake, metis, tbb, blas-devel,  cuda, suite-sparse
-    
+    bison ghostscript-devel librsvg2-tools icoutils texlive-metapost   
+    yum -y install freetype-devel, libxml2-devel    
+    yum -y install libtool, ghostscript, libpng-devel, ImageMagick-devel
+    yum -y install cmake, metis, tbb, blas-devel,  cuda, suite-sparse    
     mkdir -p /storage/home
     mkdir -p /storage/work
     mkdir -p /gpfs/scratch
