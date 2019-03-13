@@ -37,7 +37,7 @@ exec /octave-4.4.1/run-octave "$@"
     git clone https://github.com/opencollab/arpack-ng.git
     cd arpack-ng
     ./bootstrap
-    ./configure --prefix="prefix"
+    ./configure 
     make; make install
     
     mkdir -p /usr/local/octave/dev
