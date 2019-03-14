@@ -41,7 +41,6 @@ exec /octave-4.4.1/run-octave "$@"
     make; make install
     
     mkdir -p /usr/local/octave/dev
-    chown jwe.jwe /usr/local/octave/dev
     mkdir src build
     
     cd src
