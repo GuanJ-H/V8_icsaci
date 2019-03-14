@@ -33,6 +33,7 @@ exec /octave-4.4.1/run-octave "$@"
     yum -y install librsvg2-tools icoutils bzip2-devel libsndfile-devel
     yum -y install portaudio-devel mesa-libOSMesa-devel 
     yum -y install sundials-devel sundials-threads-devel
+    yum -y install gnulib-devel
     
     git clone https://github.com/opencollab/arpack-ng.git
     cd arpack-ng
@@ -40,19 +41,15 @@ exec /octave-4.4.1/run-octave "$@"
     ./configure 
     make; make install
     
-    mkdir -p /usr/local/octave/dev
-    mkdir src build
-    
-    cd src
-    hg clone http://hg.savannah.gnu.org/hgweb/octave
-    cd octave
-    ./bootstrap
-    
-    cd ../../build
-    ../src/octave/configure --prefix=/usr/local/octave/dev
+    wget ftp://ftp.gnu.org/gnu/octave/octave-4.4.1.tar.xz 
+    tar xf octave-4.4.1.tar.xz 
+    rm octave-4.4.1.tar.xz 
+    cd octave-4.4.1/ 
+    ./configure --with-qt=4
     make -j6 all
     make check
     make install
+    
     mkdir -p /storage/home
     mkdir -p /storage/work
     mkdir -p /gpfs/scratch
