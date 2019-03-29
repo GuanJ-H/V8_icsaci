@@ -45,7 +45,7 @@ exec /octave-4.4.1/run-octave "$@"
     tar xf octave-4.4.1.tar.xz 
     rm octave-4.4.1.tar.xz 
     cd octave-4.4.1/ 
-    ./configure --with-qt=4 --with-arpack-libdir=/usr/local/arpack-ng
+    ./configure --with-qt=4 --with-arpack-libdir=/arpack-ng
     make -j6 all
     make check
     make install
