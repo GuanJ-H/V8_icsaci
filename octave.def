@@ -42,7 +42,7 @@ exec /octave-5.1.0/run-octave "$@"
     tar xf octave-5.1.0.tar.xz 
     rm octave-5.1.0.tar.xz 
     cd octave-5.1.0/ 
-    ./configure --with-qt=4 --ARPACK_LIBS=/usr/lib64/
+    ./configure --with-qt=4 --with-arpack-libdir=/usr/lib64/
     make -j6 all
     make check
     make install
