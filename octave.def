@@ -38,10 +38,10 @@ exec /octave-5.1.0/run-octave "$@"
     export JAVA_HOME=/usr/lib/jvm/java
     
     
-    wget ftp://ftp.gnu.org/gnu/octave/octave-5.1.0.tar.xz 
-    tar xf octave-5.1.0.tar.xz 
-    rm octave-5.1.0.tar.xz 
-    cd octave-5.1.0/ 
+    wget ftp://ftp.gnu.org/gnu/octave/octave-4.4.1.tar.xz 
+    tar xf octave-4.4.1.tar.xz 
+    rm octave-4.4.1.tar.xz 
+    cd octave-4.4.1/ 
     ./configure --with-qt=4 --with-arpack-libdir=/usr/lib64/
     make -j6 all
     make check
