@@ -34,6 +34,7 @@ exec /octave-5.1.0/run-octave "$@"
     yum -y install portaudio-devel mesa-libOSMesa-devel 
     yum -y install sundials-devel sundials-threads-devel
     yum -y install gnulib-devel
+    ln -s /usr/lib64/atlas/libtatlas.so /usr/lib64/atlas/libatlas.so
     yum -y install arpack arpack-devel
     export JAVA_HOME=/usr/lib/jvm/java
     
