@@ -39,14 +39,9 @@ exec /octave-5.1.0/run-octave "$@"
     export JAVA_HOME=/usr/lib/jvm/java
     
     
-    wget ftp://ftp.gnu.org/gnu/octave/octave-4.4.1.tar.xz 
-    tar xf octave-4.4.1.tar.xz 
-    rm octave-4.4.1.tar.xz 
-    cd octave-4.4.1/ 
-    ./configure --with-qt=4 --with-arpack-libdir=/usr/lib64/
-    make -j6 all
-    make check
-    make install
+    git clone https://github.com/spack/spack.git
+    . spack/share/spack/setup-env.sh
+    spack install octave@4.4.1
     
     mkdir -p /storage/home
     mkdir -p /storage/work
