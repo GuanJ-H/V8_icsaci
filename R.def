@@ -9,7 +9,7 @@ Include: yum
 %environment 
 
 %runscript
-exec /octave-5.1.0/run-octave "$@"
+exec R "$@"
 
 %post
     # commands to be executed inside container during bootstrap
