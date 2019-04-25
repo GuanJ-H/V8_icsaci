@@ -24,7 +24,7 @@ exec /octave-5.1.0/run-octave "$@"
     yum -y install SDL SDL-devel
     yum install -y epel-release
 #    yum -y update
-    yum -y install v8-devel
+    yum -y install v8
     
     mkdir -p /storage/home
     mkdir -p /storage/work
